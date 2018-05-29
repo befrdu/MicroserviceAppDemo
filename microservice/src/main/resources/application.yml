@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: registration-db
+server:
+  port: 8301
+eureka:
+  client:
+    register-with-eureka: true
+    service-url: 
+      defaultZone: http://localhost:8302/eureka/ 
+  instance:
+    hostname: localhost
+    
