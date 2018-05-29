@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: registration-service
+server:
+  port: 8303
+eureka:
+  client:
+    register-with-eureka: true
+    service-url: 
+      defaultZone: http://localhost:8302/eureka/ 
+  instance:
+    hostname: localhost
