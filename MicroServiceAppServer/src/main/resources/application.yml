@@ -9,3 +9,28 @@ eureka:
     fetch-registry: true 
     service-url:
       defaultZone: http://localhost:8302/eureka  
+zuul:
+  prefix: /api
+  routes:
+  #If the request url starts with /registration-service/** it will be 
+  #routed to registration-service microservice app where the actuall destination is resolved from 
+  #eureka server
+    registration-service:
+      path: /registration-service/**
+      service-id: registration-service
+    registration-db:
+      path: /registration-db/**
+      service-id: registration-db
+  host:
+    connect-timeout-millis: 90000
+    socket-timeout-millis: 90000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 90000
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000     
