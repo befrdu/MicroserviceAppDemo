@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="submenustyle.css">
+    <script src="angular.js" type="text/javascript"></script>
+    <script src="myApp.js" type="text/javascript"></script>
+    <title>Registration</title>
+</head>
+
+<body style="background-color: #999999" ng-controller="LoginCtrl">
+    <div style="margin:2%;; background-color: #aabbdd">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a ng-click="showHomePage()" class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Student</a>
+                <div class="dropdown-menu">
+                    <a class="btn dropdown-item" ng-click="generateStudentRegistrationForm()">New</a>
+                    <a class="btn dropdown-item"ng-click="updateStudentRecord()">Update</a>
+                    <a class="btn dropdown-item" ng-click="deleteStudentRecord()">Delete</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="btn dropdown-item" ng-click="searchStudent()" >Search...</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Course</a>
+                <div class="dropdown-menu">
+                    <a class="btn dropdown-item" ng-click="generateCourseRegistrationForm()">New</a>
+                    <a class="btn dropdown-item" ng-click="updateCourse()">Update</a>
+                    <a class="btn dropdown-item" ng-click="deleteCourse()">Delete</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="btn dropdown-item" ng-click="searchCourse();" >Search...</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact_Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">About_Us</a>
+            </li>
+        </ul>
+    </div>
+    <div id="contentBody">
+        <div class="form-row"> <div class="col-2"></div><div class="col-8"><h3>Welcome to Student Registration System!<h3></div></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
